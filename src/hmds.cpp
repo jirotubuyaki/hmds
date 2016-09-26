@@ -49,7 +49,7 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 	while(flag == 0){
 		for(int i = 0;i < number;i++){
 			for(int j = 0;j < number;j++){
-				if(i < j){
+				if(i != j){
 					distance = 0;
 					for(int k = 0;k < dimention;k++){
 						distance += (point(j,k) - point(i,k)) * (point(j,k) - point(i,k));
@@ -58,10 +58,10 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 					if(approximation * basket(i,j) < distance){
 						for(int k = 0;k < dimention;k++){
 							for(int l = 0;l < dimention;l++){
-								if(k < l){
+								if(k != l){
 									double pi = atan2(point(j,k) - point(i,k),point(j,l) - point(i,l));
-									point(j,l) = point(j,l) + (-0.01) * (basket(i,j) / dimention) * cos(pi);
-									point(j,k) = point(j,k) + (-0.01) * (basket(i,j) / dimention) * sin(pi);
+									point(j,l) = point(j,l) + (-0.005) * (basket(i,j) / dimention) * cos(pi);
+									point(j,k) = point(j,k) + (-0.005) * (basket(i,j) / dimention) * sin(pi);
 								}
 							}
 						}
@@ -70,10 +70,10 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 					else if(basket(i,j) / approximation > distance){
 						for(int k = 0;k < dimention;k++){
 							for(int l = 0;l < dimention;l++){
-								if(k < l){
+								if(k != l){
 									double pi = atan2(point(j,k) - point(i,k),point(j,l) - point(i,l));
-									point(j,l) = point(j,l) + 0.01 * (basket(i,j) / dimention) * cos(pi);
-									point(j,k) = point(j,k) + 0.01 * (basket(i,j) / dimention) * sin(pi);
+									point(j,l) = point(j,l) + 0.005 * (basket(i,j) / dimention) * cos(pi);
+									point(j,k) = point(j,k) + 0.005 * (basket(i,j) / dimention) * sin(pi);
 								}
 							}
 						}	
@@ -112,6 +112,6 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 	}
 	Rprintf("input data distance : %f\n",distance_all_before);
 	Rprintf("output data distance : %f\n",distance_all);
-	Rprintf("count:%d\n",count);
+
 	return point;
 }
