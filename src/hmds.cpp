@@ -94,6 +94,7 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 		count--;
 	}
 	count = 0;
+	Rprintf("%10s : %10s : %10s : %10s\n","item","item","input distance","output distance");
 	for(int i = 0;i < number;i++){
 		for(int j = 0;j < number;j++){
 			if(i < j){
@@ -105,13 +106,12 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 				distance = sqrt(distance);
 				distance_all += distance;
 				distance_all_before += basket(i,j);
-				Rprintf("%10s : %10s : %10s : %10s\n","item","item","input distance","output distance");
-				Rprintf("%10d : %10d : %-10.3f : %-10.3f\n",i,j,basket(i,j),distance);	
+				Rprintf("%10d : %10d : %10.4f : %10.4f\n",i,j,basket(i,j),distance);	
 			}
 		}
 	}
-	Rprintf("input data distance:%f\n",distance_all_before);
-	Rprintf("output data distance:%f\n",distance_all);
+	Rprintf("input data distance : %f\n",distance_all_before);
+	Rprintf("output data distance : %f\n",distance_all);
 	Rprintf("count:%d\n",count);
 	return point;
 }
