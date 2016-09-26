@@ -58,7 +58,7 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 					if(approximation * basket(i,j) < distance){
 						for(int k = 0;k < dimention;k++){
 							for(int l = 0;l < dimention;l++){
-								if(k != l){
+								if(k < l){
 									double pi = atan2(point(j,k) - point(i,k),point(j,l) - point(i,l));
 									point(j,l) = point(j,l) + (-0.01) * (basket(i,j) / dimention) * cos(pi);
 									point(j,k) = point(j,k) + (-0.01) * (basket(i,j) / dimention) * sin(pi);
@@ -70,7 +70,7 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 					else if(basket(i,j) / approximation > distance){
 						for(int k = 0;k < dimention;k++){
 							for(int l = 0;l < dimention;l++){
-								if(k != l){
+								if(k < l){
 									double pi = atan2(point(j,k) - point(i,k),point(j,l) - point(i,l));
 									point(j,l) = point(j,l) + 0.01 * (basket(i,j) / dimention) * cos(pi);
 									point(j,k) = point(j,k) + 0.01 * (basket(i,j) / dimention) * sin(pi);
