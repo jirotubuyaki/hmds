@@ -6,9 +6,9 @@ author: |
   | Okada Algorithm Private Invention Research Laboratory
   | okadaalgorithm@gmail.com
 date: "hmds version 1.0 `r Sys.Date()`"
-output: rmarkdown::pdf_document
+output: rmarkdown::html_document
 bibliography: citation.bib
-vignette: >
+li: >
   \VignetteIndexEntry{Vignette Title}
   \VignetteEngine{knitr::knitr}
   \VignetteEncoding{UTF-8}

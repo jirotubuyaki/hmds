@@ -3,7 +3,7 @@
 \docType{data}
 \name{similarity}
 \alias{similarity}
-\title{Simirarity and Distance between two points in twenty dimentions.}
+\title{Simirarity or Distance between two points.}
 \format{An object of class \code{matrix} with 20 rows and 20 columns.}
 \usage{
 similarity
