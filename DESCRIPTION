@@ -8,10 +8,7 @@ Authors@R: c(
   )
 Author: Masashi Okada
 Maintainer: Masashi Okada <okadaalgorithm@gmail.com>
-Description: A heuristic in order to calculate coordinates in high dimensions. 
-If the similarities or distances between the two points and dimentions in the space are given,
-this heuristic calculates approximate coordinates in high dimentions.
-And if the similarities or distances have a contradict in metric space, the method calculates approximate coordinates.
+Description: A heuristic in order to calculate coordinates in high dimensions. If the similarities or distances between the two points and dimentions in the space are given,this heuristic calculates approximate coordinates in high dimentions. And if the similarities or distances have a contradict in metric space, the method calculates approximate coordinates.
 Depends: R (>= 2.10)
 License: GPL (>= 2)
 Imports:Rcpp (>= 0.12.7)
