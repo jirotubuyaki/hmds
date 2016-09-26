@@ -55,3 +55,10 @@ This pakage includes a sample dataset. The dataset containing a matrix of simila
 ##Conclusions
 The heuristic for Multi dimentional Scaling is described and explain how to use. This package can produce the approximate coordinates in high dimentions. And several improvements are planed. Please send suggenstion and report bugs to okadaalgorithm@gmail.com.
 
+##References
+Borg, Groenen, I. 2005. “Modern Multidimensional Scaling.” Springer-Verlag.
+Fry, Ben. 2007. “Visualizing Data Exploring and Explaining Data with the Processing Environment.” O’Reilly
+Media.
+Liu, Bingh. 2007. “Web Data Mining Exploring Hyperlinks, Contents, and Usage Data.” Springer-Verlag pp.
+117-146,
+Zezula, Amato, P. 2006. “Similarity Search.” IEEE Transactions on Pattern Analysis and Machine Intelligence.
