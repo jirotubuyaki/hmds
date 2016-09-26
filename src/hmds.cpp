@@ -2,7 +2,7 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 //' Calcurate approximate positions in high dimensions
-//' @param data symmetric NumericMatrix of input data. it describe the distance between two points.
+//' @param data NumericMatrix of input data. it describe the distance between two points.
 //' @param dim int: it describe dimentions of distance space between two poitns.
 //' @param approx double: A limit of distance of all pairs points in the space.  
 //' @param itera int: iteration numbers to search space between two points.
@@ -58,7 +58,7 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 					if(approximation * basket(i,j) < distance){
 						for(int k = 0;k < dimention;k++){
 							for(int l = 0;l < dimention;l++){
-								if(k != l){
+								if(k < l){
 									double pi = atan2(point(j,k) - point(i,k),point(j,l) - point(i,l));
 									point(j,l) = point(j,l) + (-0.01) * (basket(i,j) / dimention) * cos(pi);
 									point(j,k) = point(j,k) + (-0.01) * (basket(i,j) / dimention) * sin(pi);
@@ -70,7 +70,7 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 					else if(basket(i,j) / approximation > distance){
 						for(int k = 0;k < dimention;k++){
 							for(int l = 0;l < dimention;l++){
-								if(k != l){
+								if(k < l){
 									double pi = atan2(point(j,k) - point(i,k),point(j,l) - point(i,l));
 									point(j,l) = point(j,l) + 0.01 * (basket(i,j) / dimention) * cos(pi);
 									point(j,k) = point(j,k) + 0.01 * (basket(i,j) / dimention) * sin(pi);
@@ -112,6 +112,6 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 	}
 	Rprintf("input data distance : %f\n",distance_all_before);
 	Rprintf("output data distance : %f\n",distance_all);
-
+	Rprintf("count:%d\n",count);
 	return point;
 }

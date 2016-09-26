@@ -7,7 +7,7 @@
 hmds(data, dim = 50L, approx = 1.01, itera = 1000L)
 }
 \arguments{
-\item{data}{symmetric NumericMatrix of input data. it describe the distance between two points.}
+\item{data}{NumericMatrix of input data. it describe the distance between two points.}
 
 \item{dim}{int: it describe dimentions of distance space between two poitns.}
 
