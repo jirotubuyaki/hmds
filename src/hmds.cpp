@@ -2,7 +2,7 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 //' Calcurate approximate positions in high dimensions
-//' @param data NumericMatrix of input data. it describe the distance between two points.
+//' @param data symmetric NumericMatrix of input data. it describe the distance between two points.
 //' @param dim int: it describe dimentions of distance space between two poitns.
 //' @param approx double: A limit of distance of all pairs points in the space.  
 //' @param itera int: iteration numbers to search space between two points.

@@ -9,7 +9,7 @@
 similarity
 }
 \description{
-A dataset containing a matrix of similarity between two points. 20 row and 20 col.
+A dataset containing a symmetric matrix of similarity between two points. 20 row and 20 col.
 }
 \keyword{datasets}
 
