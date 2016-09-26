@@ -1,0 +1,19 @@
+Package: hmds
+Type: Package
+Title: A Heuristic of High and Multi Dimensional Scaling
+Version: 1.0
+Date: 2016-09-25
+Authors@R: c( 
+  person("Masashi", "Okada", role = c("aut", "cre"), email="okadaalgorithm@gmail.com")
+  )
+Author: Masashi Okada
+Maintainer: Masashi Okada <okadaalgorithm@gmail.com>
+Description: High dimensional coordinates calculation heuristic in similarities between the two points.
+  This heuristic calculates the approximate coordinates in high dimentions.
+  And if the similarities or distances have a contradict in metric space, the method calculates the approximate coordinates.
+Depends: R (>= 2.10)
+License: GPL (>= 2)
+Imports:Rcpp (>= 0.12.7)
+LinkingTo: Rcpp
+RoxygenNote: 5.0.1
+Maintainer: Masashi Okada <okadaalgorithm@gmail.com>
