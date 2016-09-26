@@ -52,3 +52,6 @@ This pakage includes a sample dataset. The dataset containing a matrix of simila
 > data();
 ```
 
+##Conclusions
+The heuristic for Multi dimentional Scaling is described and explain how to use. This package can produce the approximate coordinates in high dimentions. And several improvements are planed. Please send suggenstion and report bugs to okadaalgorithm@gmail.com.
+
