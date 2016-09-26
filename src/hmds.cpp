@@ -49,7 +49,7 @@ NumericMatrix hmds(const NumericMatrix data,const int dim=50,const double approx
 	while(flag == 0){
 		for(int i = 0;i < number;i++){
 			for(int j = 0;j < number;j++){
-				if(i != j){
+				if(i < j){
 					distance = 0;
 					for(int k = 0;k < dimention;k++){
 						distance += (point(j,k) - point(i,k)) * (point(j,k) - point(i,k));
