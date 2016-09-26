@@ -17,3 +17,5 @@ Imports:Rcpp (>= 0.12.7)
 LinkingTo: Rcpp
 RoxygenNote: 5.0.1
 Maintainer: Masashi Okada <okadaalgorithm@gmail.com>
+Suggests: knitr
+VignetteBuilder: knitr
