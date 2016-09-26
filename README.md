@@ -17,7 +17,6 @@ If download from Github you can use devtools by the commands:
 ```
 > library(devtools)
 > install_github("jirotubuyaki/hmds")
-
 ```
 
 Once the packages are installed, it needs to be made accessible to the current R session by the commands:
