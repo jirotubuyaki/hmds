@@ -34,7 +34,7 @@ For online help facilities or the details of a particular command (such as the f
 This pakage has only one method. And it is excused by:
 
 ```
-> output <- hmds(data = input,dim=20,approx=1.2,itera=10000)
+> output <- hmds(data = input, dim=20, approx=1.2, itera=10000)
 ```
 
 Let's args be
