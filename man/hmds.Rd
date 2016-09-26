@@ -22,6 +22,6 @@ Numeric Matrix of points in a distance space. row is items. col is dimentions.
 Calcurate approximate positions in high dimensions
 }
 \examples{
-output <- hmds(matrix(1:9, nrow=3, ncol=3),dim=20,approx=1.2,itera=10000);
+output <- hmds(matrix(10, nrow=3, ncol=3),dim=20,approx=1.2,itera=10000);
 }
 
