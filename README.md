@@ -39,7 +39,7 @@ This pakage has only one method. And it is excused by:
 
 Let's args be
 
-* data is a numeric　symmetric matrix of input data. it describe the distance between two points. 
+* data is a numeric symmetric matrix of input data. it describe the distance between two points. 
 * dim describe dimentions of distance space between two poitns. 
 * approx is approximate rate of difference between input distance and output distanced. If the difference between input and output are shoter than approximate rate, iterations are halt. 
 * itera is iteration numbers to search space between all each two points.
