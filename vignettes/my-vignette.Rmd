@@ -9,7 +9,7 @@ date: "hmds version 1.0 `r Sys.Date()`"
 output: rmarkdown::html_document
 bibliography: citation.bib
 li: >
-  \VignetteIndexEntry{Vignette Expalanation of hmds}
+  \VignetteIndexEntry{Vignette How to use package hmds}
   \VignetteEngine{knitr::knitr}
   \VignetteEncoding{UTF-8}
 ---

@@ -9,7 +9,7 @@ date: "hmds version 1.0 `r Sys.Date()`"
 output: rmarkdown::pdf_document
 bibliography: citation.bib
 vignette: >
-  %\VignetteIndexEntry{Title}
+  %\VignetteIndexEntry{How to use package hmds}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
