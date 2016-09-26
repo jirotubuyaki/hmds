@@ -1,4 +1,4 @@
-# hmds: An R Package for Heuristic High and Multi Dimentional Scaling (now package is under construction)
+# hmds: An R Package for Heuristic High and Multi Dimentional Scaling
 
 ## Abstract
 In this paper, we propose the heuristic in order to calculate the coordinates in high dimensions, if the similarities or distances between the two points and dimentions in the space are given, this heuristic calculates the approximate coordinates in high dimentions. And if the similarities or distances have a contradict in metric space, the method calculates the approximate coordinates. Its coordinates are available for lots of analysis. This heuristic proposed by R package.
