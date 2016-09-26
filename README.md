@@ -29,7 +29,6 @@ For online help facilities or the details of a particular command (such as the f
 
 ```
 > help(package="hmds")
-> help(hmds)
 ```
 ##Method
 This pakage has only one method. And it is excused by:
