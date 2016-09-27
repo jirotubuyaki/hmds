@@ -7,11 +7,6 @@ In this document, I propose the heuristic in order to calculate the coordinates 
 Multi-Dimentional Scaling(MDS)[@Borg2005] is a statistical method in order to find a data structure. If the similarities or distances between the two points are given, MDS can map the data to two or three dimention coordinate space. In this package, I proposed the heuristic in order to calculate coordinates in high dimentional space from the data of similarities or distance between two points. This heuristic calculates the approximate coordinates in the dimension determined by user. And if the similarities or distances have a contradict in metric space, the method calculates the approximate coordinates. And several important methods like Clustering[@Liu2007], Nearest Neighbor Search[@Zezula2006]  and Data Visualization[@Ben2007] require the coordinates in high dimensions as metric space. And this heuristic acts as below.First of all, randomly map the points in the high dimentional space. Then a distance between two points compare with the given data in order. If distance is longer than the data, the disntace is made shorter by moving coordinates. If distance is shorter than the data, the disntance is made longer. This iteration continues until a sum of disntace becomes smaller than approximate rate or a limit of iteration count. As a result, an approximate coordinate points in all data are acquired.
 
 ## Installation
-
-```
-> install.packages("hmds")
-```
-
 If download from Github you can use devtools by the commands:
 
 ```
