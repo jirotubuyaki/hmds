@@ -53,6 +53,11 @@ This pakage includes a sample dataset. The dataset containing a matrix of simila
 ##Conclusions
 The heuristic for Multi Dimentional Scaling is described and explain how to use. This package can produce the approximate coordinates in high dimentions. And several improvements are planed. Please send suggenstion and report bugs to okadaalgorithm@gmail.com.
 
+
+## Acknowledgments
+This activity would not have been possible without the support of my family and friends. To my family, thank you for lots of encouragement for me and inspiring me to follow my dreams. I am especially grateful to my parents, who supported me all aspects.  
+
+
 ##References
 Borg, Groenen, I. 2005. “Modern Multidimensional Scaling.” Springer-Verlag.  
 Fry, Ben. 2007. “Visualizing Data Exploring and Explaining Data with the Processing Environment.” O’Reilly
