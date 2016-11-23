@@ -59,9 +59,7 @@ This activity would not have been possible without the support of my family and 
 
 
 ##References
-Borg, Groenen, I. 2005. “Modern Multidimensional Scaling.” Springer-Verlag.  
 Fry, Ben. 2007. “Visualizing Data Exploring and Explaining Data with the Processing Environment.” O’Reilly
 Media.  
 Liu, Bingh. 2007. “Web Data Mining Exploring Hyperlinks, Contents, and Usage Data.” Springer-Verlag pp.
-117-146,  
-Zezula, Amato, P. 2006. “Similarity Search.” IEEE Transactions on Pattern Analysis and Machine Intelligence.  
+117-146, 
