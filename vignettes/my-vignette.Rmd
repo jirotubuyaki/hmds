@@ -14,23 +14,17 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 ## Abstract
-In this paper, we propose a heuristic in order to calculate the coordinates in high dimensions. If similarities or distances between two points and dimensions in the space are given, this heuristic calculates approximate coordinates in high dimensions. And if the similarities or distances have a contradict in metric space, the method calculates approximate coordinates. Its coordinates are available for lots of analysis. This heuristic proposed by R package.
+In this document, I propose a heuristic to calculate the coordinates in high dimensions. If the similarities or distances between two objects and dimensions in the space are given, this heuristic calculates approximate coordinates in high dimensions. And if the similarities or distances have contradiction in metric space, the program calculates approximate coordinates. Its coordinates are available for lots of analysis. This heuristic is proposed by R package.
 
 ## Introduction
-Multi-Dimensional Scaling(MDS) is a statistical method in order to put points at coordinates. If the similarities or distances between the two objects are given, MDS can put the data into two or three dimensional coordinate space. In this package, I proposed a heuristic in order to calculate coordinates in high dimensional space from the data of similarities or distances between two objects. This heuristic calculates approximate coordinates in the dimensions given by user. And if the similarities or distances have a contradict in metric space, the method calculates approximate coordinates. And several important methods like Clustering[@Liu2007] and Data Visualization[@Ben2007] require coordinates in high dimensions as coordinate space. And this heuristic acts as follows. First of all, this program randomly puts the points in the high dimensional space. The number of dimensions are given by user. Then distances between two objects compare with the given data in turns. If distances are longer than the data, the distances is made shorter by moving coordinates. If distance is shorter than the data, the distance is made longer. This iteration continues until the sum of distances becomes smaller than an approximate rate or a limit of iteration. As a result, approximate coordinate points in all pair objects are acquired.
+Multi-Dimensional Scaling(MDS) is a statistical method in order to put objects at coordinates. If the similarities or distances between two objects are given, MDS can puts objects in data into two or three dimensional coordinate space. In this package, I proposed a heuristic in order to calculate coordinates in high dimensional space from the data of similarities or distances between two objects. This heuristic calculates approximate coordinates in the dimensions given by user. And if the similarities or distances have contradiction in metric space, the method can calculates approximate coordinates. And several important methods like Clustering[@Liu2007] and Data Visualization[@Ben2007] require coordinates in high dimensions. And this heuristic acts as follows. First of all, this program randomly puts the points in the high dimensional space. The number of dimensions is given by user. Then the distances between two objects are compared with the given data in turns. If the distance is longer than the distance of two objects in the data, the distances is made shorter by moving the points in coordinate space. If the distance is shorter than the data, the distance is made longer. This iteration continues until the sum of distances is less than an approximate rate. And if the sum of distances is not less than the rate, the program exits by the limit of iteration count. As a result, approximate coordinate points of all objects are acquired.
 
 ## Installation
-
-```
-> install.packages("hmds")
-```
-
 If download from GitHub you can use devtools by the commands:
 
 ```
 > library(devtools)
 > install_github("jirotubuyaki/hmds")
-
 ```
 
 Once the packages are installed, it needs to be made accessible to the current R session by the commands:
@@ -44,8 +38,7 @@ For online help facilities or the details of a particular command (such as the f
 ```
 > help(package="hmds")
 ```
-
-##Method
+## Method
 This pakage has only one method. And it is excused by:
 
 ```
@@ -57,20 +50,25 @@ Let's args be
 * data is a numeric symmetric matrix of input data. it describe the distance between two points.
 * dim describe dimensions of distance space between two points.
 * approx is approximate rate of difference between input distance and output distanced. If the difference between input and output are shorter than approximate rate, iterations are halt.
-* itera is iteration numbers to move coordinate space between all each two points.
+* itera is iteration numbers to search space between all each two points.
 
 Then let's return be
 
-* output is a numeric matrix of points in a coordinate space. row is items. col is dimensions.
+* output is a numeric matrix of points in a distance space. row is items. col is dimensions.
 
-##Data
-This package includes a sample dataset. The dataset containing a matrix of similarity between two points. The dataset is generated by R. Please check the data like this:
+## Data
+This package includes a sample dataset. The dataset contains a matrix of similarity between two points. The dataset is generated by R. Please check the data like this:
 
 ```
 > data(package="hmds")
 ```
 
-##Conclusions
-The heuristic for Multi dimensional Scaling is described and explain how to use. This package can produce the approximate coordinates in high dimensions. And several improvements are planed. Please send suggestion and report bugs to okadaalgorithm@gmail.com.
+## Conclusions
+The heuristic for Multi Dimensional Scaling is described and explain how to use. This package can produce the approximate coordinates in high dimensions. And several improvements are planed. Please send suggestion and report bugs to okadaalgorithm@gmail.com.
 
-##References
+
+## Acknowledgments
+This activity would not have been possible without the support of my family and friends. To my family, thank you for lots of encouragement for me and inspiring me to follow my dreams. I am especially grateful to my parents, who supported me all aspects.  
+
+
+## References
