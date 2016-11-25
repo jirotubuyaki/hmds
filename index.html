@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Hmds : hmds: An R Package for Heuristic High and Multi Dimensional Scaling">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Hmds</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jirotubuyaki/hmds">View on GitHub</a>
+
+          <h1 id="project_title">Hmds</h1>
+          <h2 id="project_tagline">hmds: An R Package for Heuristic High and Multi Dimensional Scaling</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jirotubuyaki/hmds/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jirotubuyaki/hmds/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="hmds-an-r-package-for-heuristic-high-and-multi-dimensional-scaling" class="anchor" href="#hmds-an-r-package-for-heuristic-high-and-multi-dimensional-scaling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>hmds: An R Package for Heuristic High and Multi Dimensional Scaling</h1>
+
+<p><a href="https://travis-ci.org/jirotubuyaki/hmds"><img src="https://travis-ci.org/jirotubuyaki/hmds.svg?branch=master" alt="Build Status"></a></p>
+
+<h2>
+<a id="abstract" class="anchor" href="#abstract" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Abstract</h2>
+
+<p>In this document, I propose a heuristic to calculate the coordinates in high dimensions. If the similarities or distances between two objects and dimensions in the coordinate space are given, The heuristic calculates approximate coordinates in high dimensions. And if the similarities or distances have contradiction in metric space, the heuristic can  calculate approximate coordinates. The coordinates are available for lots of analysis. The heuristic is proposed by R package.</p>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>Multi-Dimensional Scaling(MDS)[<a href="https://github.com/Carroll1980" class="user-mention">@Carroll1980</a>] is a statistical method in order to put objects at coordinates. If the similarities or distances between two objects are given, MDS can put objects into two or three dimensional coordinate space. In this package, I propose a heuristic in order to calculate coordinates in high dimensional space from the data of similarities or distances between two objects. The heuristic calculates approximate coordinates in the dimensions given by user. And if the similarities or distances have contradiction in metric space, the method can calculate approximate coordinates. And several important methods like Clustering[@Liu2007] and Data Visualization[@Ben2007] require coordinates in high dimensions. And the heuristic acts as follows. First of all, the heuristic randomly puts the objects in the high dimensional space. The number of dimensions is given by user. Then the distances between two objects are compared with the given data in turns. If the distance is longer than the distance of two objects in the data, the distances is made shorter by moving the objects in coordinate space. If the distance is shorter than the data, the distance is made longer. The iteration continues until the sum of distances is less than an approximate rate. And if the sum of distances is not less than the rate, the program exits by the limit of iteration count. As a result, approximate coordinate points of all objects are acquired.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>If download from GitHub, you can use devtools by the commands:</p>
+
+<pre><code>&gt; library(devtools)
+&gt; install_github("jirotubuyaki/hmds")
+</code></pre>
+
+<p>Once the packages are installed, it needs to be made accessible to the current R session by the commands:</p>
+
+<pre><code>&gt; library(hmds)
+</code></pre>
+
+<p>For online help facilities or the details of a particular command (such as the function hmds) you can type:</p>
+
+<pre><code>&gt; help(package="hmds")
+</code></pre>
+
+<h2>
+<a id="method" class="anchor" href="#method" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Method</h2>
+
+<p>This pakage has only one method. And it is excused by:</p>
+
+<pre><code>&gt; output &lt;- hmds(data = input, dim=20, approx=1.2, itera=10000)
+</code></pre>
+
+<p>Let's args be</p>
+
+<ul>
+<li>data is a numeric symmetric matrix of input data. It describe similarities or distances between two objects.</li>
+<li>dim describes dimensions of coordinate space.</li>
+<li>approx is approximate rate between the sum of input distances and the sum of output distances. If the rate between input and output are less than approximate rate, iterations are halt.</li>
+<li>itera is iteration numbers to move points in coordinate space.</li>
+</ul>
+
+<p>Then let's return be</p>
+
+<ul>
+<li>output is a numeric matrix of points in coordinate space. Row is objects. Col is dimensions.</li>
+</ul>
+
+<h2>
+<a id="data" class="anchor" href="#data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data</h2>
+
+<div>
+This package includes a sample dataset. The dataset contains a matrix of similarity between two points. The dataset is generated by R. Please check the data and use dataset named "similarity" like this:
+</div>
+
+<pre><code>&gt; data(package="hmds")
+&gt; data(similarity)
+</code></pre>
+
+<h2>
+<a id="conclusions" class="anchor" href="#conclusions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conclusions</h2>
+
+<p>The heuristic for Multi Dimensional Scaling is described and explain how to use. This package can produce the approximate coordinates in high dimensions. And several improvements are planed. Please send suggestions and report bugs to <a href="mailto:okadaalgorithm@gmail.com">okadaalgorithm@gmail.com</a>.</p>
+
+<h2>
+<a id="acknowledgments" class="anchor" href="#acknowledgments" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgments</h2>
+
+<p>This activity would not have been possible without the support of my family and friends. To my family, thank you for lots of encouragement for me and inspiring me to follow my dreams. I am especially grateful to my parents, who supported me all aspects.  </p>
+
+<h2>
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References</h2>
+
+<p>Carroll, J D, and P Arabie. 1980. “Multidimensional scaling.” Annual Review of Psychology 31 (1): 607–49.
+doi:10.1146/annurev.ps.31.020180.003135.<br>
+Fry, Ben. 2007. “Visualizing Data Exploring and Explaining Data with the Processing Environment.” O’Reilly
+Media.<br>
+Liu, Bingh. 2007. “Web Data Mining Exploring Hyperlinks, Contents, and Usage Data.” Springer-Verlag pp.
+117-146,</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Hmds maintained by <a href="https://github.com/jirotubuyaki">jirotubuyaki</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
