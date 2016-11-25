@@ -7,16 +7,16 @@
 hmds(data, dim = 50L, approx = 1.01, itera = 1000L)
 }
 \arguments{
-\item{data}{symmetric NumericMatrix of input data. it describe the distance between two points.}
+\item{data}{data is a numeric symmetric matrix of input data. It describe similarities or distances between two objects.}
 
-\item{dim}{int: it describe dimentions of distance space between two poitns.}
+\item{dim}{int: dim describes dimensions of coordinate space.}
 
-\item{approx}{double: A limit of distance of all pairs points in the space.}
+\item{approx}{double: approximate rate between the sum of input distances and the sum of output distances. If the rate between input and output are less than approximate rate, iterations are halt.}
 
-\item{itera}{int: iteration numbers to search space between two points.}
+\item{itera}{int: iteration numbers to move points in coordinate space.}
 }
 \value{
-Numeric Matrix of points in a distance space. row is items. col is dimentions.
+output is a numeric matrix of points in coordinate space. Row is objects. Col is dimensions.
 }
 \description{
 Calcurate approximate positions in high dimensions
@@ -24,4 +24,3 @@ Calcurate approximate positions in high dimensions
 \examples{
 output <- hmds(matrix(1:9, nrow=3, ncol=3),dim=20,approx=1.2,itera=10000);
 }
-
