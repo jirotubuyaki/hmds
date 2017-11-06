@@ -1,1 +1,3 @@
 src/* linguist-vendored
+paper/* linguist-vendored
+vignettes/* linguist-vendored
